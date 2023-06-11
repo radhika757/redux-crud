@@ -1,10 +1,13 @@
+body{
+  background-color: aliceblue;
+}
 .App {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: rgb(2,0,36);
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(128,128,38,1) 99%);
+  /* background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(128,128,38,1) 99%); */
   /* background-color: darkgray; */
 }
 
@@ -21,6 +24,15 @@ input[type="text"] {
 .box button{
   padding: 10px 10px;
 }
+
+.box h3{
+margin-right: 15px;
+}
+.box span{
+  color: lightslategray;
+  /* margin-right: 5px; */
+  text-indent: 5px;
+}
 .displayUsers {
   margin-top: 20px;
   display: flex;
@@ -31,6 +43,7 @@ input[type="text"] {
 .addUser button {
   padding: 10px 10px;
   border: none;
+  cursor: pointer;
   margin: 2px;
 }
 .displayUsers div {

@@ -2,26 +2,26 @@ export const UserData = [
   {
     id: 1,
     name: "Radhika Rao",
-    username: "JsGuru",
+    username: "reactLearner",
   },
   {
     id: 2,
-    name: "Wasim Khan",
-    username: "myNameIsKhan",
+    name: "Abel",
+    username: "abelIsMyName",
   },
   {
     id: 3,
-    name: "Akshata Patil",
-    username: "phpMaster",
+    name: "Aditya Shetty",
+    username: "shetty@23",
   },
   {
     id: 4,
     name: "Kavitha Ramraj",
-    username: "codeChef",
+    username: "thePM",
   },
   {
     id: 5,
-    name: "Sanjeev",
-    username: "UIMaster",
+    name: "Olivia Ray",
+    username: "oliviaIsMyName",
   },
 ];

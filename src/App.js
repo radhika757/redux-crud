@@ -1,7 +1,7 @@
 import "./App.css";
 import { useSelector, useDispatch } from "react-redux";
 import { addUser, deleteuser, updateUser } from "./features/users";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
   const dispatch = useDispatch();
@@ -11,6 +11,17 @@ function App() {
   const [updateUsername, setUpdateUsername] = useState("");
   // console.log(name, username);
 
+  useEffect(() => {
+    const storedUsername = localStorage.getItem(username);
+    if (storedUsername) {
+      setUserName(storedUsername);
+    }
+  }, []);
+
+  const handleUserNameUpdate = () => {
+    const newUserName = updateUsername;
+    localStorage.setItem(username, newUserName);
+  };
   return (
     <div className="App">
       <h2>Users Manager</h2>
@@ -28,6 +39,7 @@ function App() {
           onChange={(e) => {
             setUserName(e.target.value);
           }}
+          // value={username}
         />
         <button
           onClick={() => {
@@ -43,22 +55,38 @@ function App() {
           Add User
         </button>
       </div>
+        
+      <div>From the storage - <b>{username}</b> </div>
+
       <div className="displayUsers">
         {userList.map((user) => {
           return (
             <div className="box" key={user.id}>
-              <h3>{user.name}</h3>
-              <h3>{user.username}</h3>
+              <h3>
+                <span>Username -</span>
+                {user.name}
+               
+              </h3>
+              <h3>
+                <span>Name -</span>
+                {user.username}
+                {/* {username} */}
+              </h3>
               <input
-                type="text"
+                type="text"   
                 placeholder="Edit your username"
+                // value={username}
                 onChange={(event) => {
                   setUpdateUsername(event.target.value);
+                  handleUserNameUpdate();
                 }}
               />
               <button
                 onClick={() => {
-                  dispatch(updateUser({ id: user.id, username: updateUsername }));
+                  dispatch(
+                    updateUser({ id: user.id, username: updateUsername })
+                  );
+                
                 }}
               >
                 Update
