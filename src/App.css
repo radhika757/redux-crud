@@ -1,0 +1,45 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(128,128,38,1) 99%);
+  /* background-color: darkgray; */
+}
+
+.App h2 {
+  background-color: aliceblue;
+  padding: 10px 10px;
+}
+
+input[type="text"] {
+  padding: 10px 10px;
+  margin: 10px;
+}
+
+.box button{
+  padding: 10px 10px;
+}
+.displayUsers {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.addUser button {
+  padding: 10px 10px;
+  border: none;
+  margin: 2px;
+}
+.displayUsers div {
+  width: 350px;
+  height: 150px;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
